@@ -1,0 +1,62 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       .mark{
+            color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <div id="searchBox">
+        <input type="text" id="input" placeholder="Search">
+        <input type="button" id="searchBtn" value="Search" onclick="search();">
+
+
+    </div>
+    <div id="content">
+        <p id="p">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic quam labore tenetur debitis? Eum nisi natus eos voluptas esse possimus voluptatibus alias quia quas. Aliquam, possimus! Dolorum fugiat in accusamus facilis excepturi, ab libero ducimus corrupti consectetur fugit sequi error nesciunt ullam ratione dolore voluptatum, quas earum. Excepturi doloremque et quia quis rem eligendi amet inventore quam modi soluta nesciunt, aperiam vitae ducimus ratione ea quo. Earum voluptatem molestiae est, harum accusamus provident quasi officiis reprehenderit aperiam corporis sint laborum necessitatibus, illum nemo maiores dolorum vero molestias dignissimos? Accusantium! Special Character Expression : ~ @ # $ % ^ & * ( ) _ + { [ } ] | ' " ; . , < > / \ </p>
+    </div>
+
+
+   
+
+
+
+    <script type="text/javascript">
+        const p = document.getElementById("p");
+        function search() {
+        
+            let input = document.getElementById("input").value;
+            if (input !== ""){
+                let regExp = new RegExp(input);
+                p.innerHTML=(p.textContent).replace(regExp,"<mark>$&</mark>");
+            
+            }
+
+        }
+          
+    </script>
+ 
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
